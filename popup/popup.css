@@ -1,0 +1,273 @@
+button::-moz-focus-inner {
+    border: 0;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body,
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+    height: 760px;
+    width: 410px;
+}
+
+#content {
+    padding: 5px;
+}
+
+#scope {
+    display: grid;
+    grid-template: [row1-start] "cc-div always-div" auto [row1-end] / 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#scope .checkbox-container {
+    display: flex;
+    background-color: #eee;
+}
+
+#scope label {
+    flex: 1;
+    font-size: 1.1rem;
+    align-self: center;
+    padding: 14px 0 14px 10px;
+    user-select: none;
+}
+
+#scope input[type="checkbox"] {
+    width: 30px;
+    height: 30px;
+    align-self: center;
+    margin-right: 10px;
+}
+
+#cc-div {
+    grid-area: cc-div;
+    font-size: 1.2rem;
+}
+
+#always-div {
+    grid-area: always-div;
+}
+
+#container {
+    display: inline-block;
+    width: 100%;
+    height: 250px;
+    margin: auto;
+    position: relative;
+}
+
+#container img {
+    position: absolute;
+    height: 250px;
+    pointer-events: none;
+}
+
+canvas {
+    height: 250px;
+    width: 100%;
+    margin: auto;
+    left: 0px;
+    top: 0px;
+}
+
+#colors {
+    padding: 10px;
+    display: grid;
+    grid-template: [row1-start] "fore fore_swatch" auto [row1-end] [row2-start] "back back_swatch" auto [row2-end] [row3-start] "link link_swatch" auto [row3-end] / 80% auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+#fore {
+    grid-area: fore;
+}
+
+#back {
+    grid-area: back;
+}
+
+#link {
+    grid-area: link;
+}
+
+#fore_swatch {
+    grid-area: fore_swatch;
+}
+
+#back_swatch {
+    grid-area: back_swatch;
+}
+
+#link_swatch {
+    grid-area: link_swatch;
+}
+
+.swatch:hover {
+    cursor: pointer;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    height: 3rem;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: #eee;
+    border: 2px solid white;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+button:active {
+    background-color: #ccc;
+    border: 2px solid #888;
+}
+
+.active-btn {
+    background-color: #ccc;
+    border: 2px solid #888;
+}
+
+.active-swatch {
+    border: 2px solid #888888;
+}
+
+.slide-container {
+    /* visibility: hidden; */
+    /* display: none; */
+    display: flex;
+    width: 100%;
+    margin: 10px;
+}
+
+#lightness-value {
+    flex: 2;
+    text-align: center;
+    color: #333333;
+    font-size: 1.4rem;
+    text-emphasis: center;
+}
+
+.slider {
+    flex: 8;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb,
+.slider::-moz-range-thumb {
+    border-radius: 10000%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-runnable-track,
+.slider::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    cursor: pointer;
+    background: #333;
+    border-radius: 1.3px;
+}
+
+footer {
+    position: absolute;
+    background-color: #bbb;
+    color: #ccc;
+    bottom: -88px;
+    height: 100px;
+    width: 100%;
+    transition: bottom 200ms;
+}
+
+footer:hover {
+    bottom: 0px;
+}
+
+#divider {
+    height: 10px;
+}
+
+#thumb {
+    position: relative;
+    background-color: white;
+    top: -10px;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+}
+
+footer section {
+    display: grid;
+    grid-template-areas: "donate always-on reset";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+#donate {
+    grid-area: donate;
+    font-size: 1.3rem;
+    color: #222;
+}
+
+#always-on {
+    grid-area: always-on;
+}
+
+#reset {
+    grid-area: reset;
+}
+
+#info {
+    opacity: 0;
+    display: flex;
+    position: absolute;
+    top: 5rem;
+    min-height: 2rem;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    pointer-events: none;
+    /* transition: opacity 50ms; */
+}
+
+#info p {
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    margin: auto;
+    font-size: 1.2rem;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+#icons {
+    position: absolute;
+    right: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    margin-top: 10px;
+    margin-right: 5px;
+}

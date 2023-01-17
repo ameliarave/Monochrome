@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+    <div id="info">
+        <p>Enable for</p>
+    </div>
+
+    <div id="content">
+        <div style="float:left">
+            <img src="../icons/placeholder.png" />
+        </div>
+        <h1>MonoChrome</h1>
+        <div id="container">
+            <canvas></canvas>
+            <!-- img src="../icons/color-wheel-final2.png" style="left: 77px; top: 0px;"> -->
+            <img src="../icons/placeholder2.jpeg" style="width:80px; height:80px; left:5px; bottom:0px;">
+        </div>
+        <div class="slide-container">
+            <input type="range" min="0" max="100" value="50" class="slider" id="lightness" />
+            <div id="lightness-value">50%</div>
+        </div>
+
+        <section id="colors">
+            <button id="fore">Text</button>
+            <div id="fore-swatch" class="swatch" style="border-radius:100%; width:70%;"></div>
+            <button id="back">Background</button>
+            <div id="back-swatch" class="swatch" style="border-radius:100%; width:70%;"></div>
+            <button id="link">Link</button>
+            <div id="link-swatch" class="swatch" style="border-radius:100%; width:70%;"></div>
+        </section>
+        <div id="scope">
+            <div id="change-colors-div" class="checkbox-container">
+                <label for="change-colors">Apply to Current Page</label>
+                <input type="checkbox" id="change-colors" name="change-colors" />
+            </div>
+            <div id="always-div" class="checkbox-container">
+                <label for="always" id="always-label">Apply to New Tabs</label>
+                <input type="checkbox" id="always" name="always" />
+            </div>
+            <div id="blur-div" class="checkbox-container">
+                <label for="images" id="blur-label">Blur Images</label>
+                <input type="checkbox" id="always" name="always" />
+            </div>
+            <div id="options-div" class="checkbox-container">
+                <label for="options" id="options-label">Advanced Options</label>
+                <input type="checkbox" id="always" name="always" />
+            </div>
+        </div>
+    </div>
+    <section>
+        <button id="reset" title="This button will reset colors to defaults and clear out any sites you saved with the Always button.">
+        Reset
+      </button>
+    </section>
+    <footer class="hidden">
+        <div id="divider">
+            <div id="thumb"></div>
+        </div>
+    </footer>
+    <script src="popup.js"></script>
+</body>
+
+</html>
+
+</html>
